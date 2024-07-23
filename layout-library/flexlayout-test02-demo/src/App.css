@@ -1,0 +1,19 @@
+.tabAddButton {
+  position: absolute;
+  z-index: 1;
+  top: 100px;
+  background-color: #b1e1e2;
+  border: none;
+  cursor: help;
+
+  /* animation: slidein-button 6s linear 3s infinite alternate; */
+}
+
+@keyframes slidein-button {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(200vh);
+  }
+}
