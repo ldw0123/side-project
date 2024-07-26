@@ -26,7 +26,7 @@ export const stylesheet = [
     style: {
       width: 70,
       height: 70,
-      'background-color': '#e35850',
+      'background-color': '#d38ee1',
     },
   },
   {
