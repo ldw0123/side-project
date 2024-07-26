@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import AccordionComponent from '@/components/ui/\baccordion/accordionComponent';
-import { Chart } from './\bchart/page';
+import { Chart } from '../components/ui/chart/chartPage';
 
 export default function Home() {
   return (
