@@ -2,28 +2,49 @@
 
 import React from 'react';
 import CytoscapeComponent from 'react-cytoscapejs';
+import { stylesheet } from './style';
 
 export default function CytoscapePage() {
   const elements = [
-    { data: { id: 'one', label: 'A' }, position: { x: 100, y: 100 } },
-    { data: { id: 'two', label: 'B' }, position: { x: 300, y: 100 } },
-    { data: { id: 'three', label: 'C' }, position: { x: 500, y: 20 } },
-    { data: { id: 'four', label: 'D' }, position: { x: 500, y: 180 } },
     {
-      data: { source: 'one', target: 'two', label: 'Node1에서 Node2' },
+      data: { id: 'one', label: '' },
+      position: { x: 100, y: 100 },
+      classes: 'nodeA',
+    },
+    {
+      data: { id: 'two', label: '' },
+      position: { x: 300, y: 100 },
+      classes: 'nodeB',
+    },
+    {
+      data: { id: 'three', label: '' },
+      position: { x: 500, y: 20 },
+      classes: 'nodeC',
+    },
+    {
+      data: { id: 'four', label: '' },
+      position: { x: 500, y: 180 },
+      classes: 'nodeD',
+    },
+    {
+      data: {
+        source: 'one',
+        target: 'two',
+        label: 'Node A -> Node B',
+      },
     },
     {
       data: {
         source: 'two',
         target: 'three',
-        label: 'Node2 에서 Node3',
+        label: 'Node B -> Node C',
       },
     },
     {
       data: {
         source: 'two',
         target: 'four',
-        label: 'Node2 에서 Node4',
+        label: 'Node B -> Node D',
       },
     },
   ];
@@ -33,15 +54,7 @@ export default function CytoscapePage() {
       <CytoscapeComponent
         elements={elements}
         style={{ width: '700px', height: '700px' }}
-        stylesheet={[
-          {
-            selector: 'node',
-            style: {
-              width: 70,
-              height: 70,
-            },
-          },
-        ]}
+        stylesheet={stylesheet}
         cy={(cy) => {
           cy.on('tap', 'node', (evt) => {
             const node = evt.target;

@@ -8,7 +8,10 @@ declare module 'react-cytoscapejs' {
     style?: React.CSSProperties;
     cy?: (cy: cytoscape.Core) => void;
     layout?: cytoscape.LayoutOptions;
-    stylesheet?: cytoscape.Stylesheet | cytoscape.Stylesheet[];
+    stylesheet?:
+      | cytoscape.Stylesheet
+      | cytoscape.Stylesheet[]
+      | cytoscape.Stylesheet[{}];
     className?: string;
     wheelSensitivity?: number;
   }
