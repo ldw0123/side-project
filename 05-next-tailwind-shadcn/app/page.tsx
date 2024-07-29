@@ -5,7 +5,7 @@ import { ChartPage } from '../components/ui/chart/chartPage';
 export default function Home() {
   return (
     <>
-      <h2>메인 페이지</h2>
+      <div className="text-3xl font-bold">메인 페이지</div>
       <div>
         <AccordionComponent />
         <div className="text-orange-400 mt-5">
