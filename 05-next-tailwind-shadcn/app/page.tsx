@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import AccordionComponent from '@/components/ui/\baccordion/accordionComponent';
-import { Chart } from '../components/ui/chart/chartPage';
+import { ChartPage } from '../components/ui/chart/chartPage';
 
 export default function Home() {
   return (
@@ -14,7 +14,7 @@ export default function Home() {
         <div className="text-orange-400 mt-5">
           <Link href="/cytoscape">그래프 페이지 이동</Link>
         </div>
-        <Chart />
+        <ChartPage />
       </div>
     </>
   );
