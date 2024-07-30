@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.2.0",
+    "@storybook/addon-controls": "^8.2.6",
     "@types/cytoscape": "^3.21.5",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
