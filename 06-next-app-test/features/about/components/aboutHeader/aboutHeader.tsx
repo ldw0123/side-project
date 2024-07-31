@@ -19,7 +19,7 @@ const getCustomFetch = ({path}) => {
   })
 }
 
-const userList = await getCustomFetch({'/user/list'|)
+const userList = await getCustomFetch({'/user/list'})
 
 apiFetcher(FETCH_USER_KEY)
 .setBody({})
