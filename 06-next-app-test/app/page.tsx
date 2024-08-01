@@ -19,6 +19,11 @@ export default function Home() {
           combobox 페이지 이동
         </Link>
       </div>
+      <div>
+        <Link href="/todos" className="font-bold text-red-400">
+          todos 페이지 이동
+        </Link>
+      </div>
     </>
   );
 }

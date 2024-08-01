@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import ComboboxDefault from './default/page';
 import { ComboboxPopover } from './combobox_popover';
 import { ComboboxDropdownMenu } from './combobox_dropdown';
 import { ComboBoxResponsive } from './coombobox_responsive';
