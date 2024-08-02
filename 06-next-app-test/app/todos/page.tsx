@@ -35,6 +35,7 @@ export default function TodosPage() {
         <ul key={value.id}>
           <li>todo 번호: {value.id}</li>
           <li>todo 내용: {value.title}</li>
+          <Link href={`/todos/${value.id}`}>상세 페이지로 이동</Link>
           <br />
         </ul>
       ))}
