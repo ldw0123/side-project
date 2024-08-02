@@ -4,7 +4,7 @@ import { ComboboxDropdownMenu } from './combobox_dropdown';
 import { ComboBoxResponsive } from './coombobox_responsive';
 import { ComboboxForm } from './combobox_form';
 
-export default function comboboxPage() {
+export default function ComboboxPage() {
   return (
     <>
       <div className="mb-2">

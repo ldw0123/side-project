@@ -4,7 +4,7 @@ import { Label } from '@/components/ui/label';
 import { Button } from '@/components/ui/button';
 import { InputForm } from './input_form';
 
-export default function inputPage() {
+export default function InputPage() {
   return (
     <>
       <div className="mb-8">

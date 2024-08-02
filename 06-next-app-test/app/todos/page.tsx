@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { getTodos, Todo } from '@/api/service/todo/todoApi';
 
-export default function todosPage() {
+export default function TodosPage() {
   const [todo, setTodo] = useState<Todo[]>([]);
 
   // useEffect(() => {
@@ -14,10 +14,10 @@ export default function todosPage() {
   useEffect(() => {
     const fetchTodos = async () => {
       try {
-        const todos = await getTodos();
+        const todos = await getTodos(); // await: getTodos() 함수의 비동기 호출이 완료될 때까지 대기
         setTodo(todos);
       } catch (error) {
-        console.error('Failed to fetch todos:', error);
+        console.error('todos를 가져오는 데 실패하였습니다:', error);
       }
     };
     fetchTodos();
