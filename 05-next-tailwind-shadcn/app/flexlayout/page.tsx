@@ -6,6 +6,10 @@ import 'flexlayout-react/style/underline.css'; // underline
 import { useRef } from 'react';
 import CytoscapePage from '../cytoscape/page';
 
+interface layoutProps {
+  layout: Layout;
+}
+
 let json: IJsonModel = {
   global: { tabEnableFloat: true, enableEdgeDock: true },
   borders: [],
