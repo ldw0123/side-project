@@ -3,8 +3,8 @@ import { Meta, StoryFn } from '@storybook/react';
 import Flexlayout from './page';
 
 export default {
-  title: 'Flexlayout/Page',
   component: Flexlayout,
+  title: 'Flexlayout',
 } as Meta;
 
 const Template: StoryFn = (args) => <Flexlayout {...args} />;

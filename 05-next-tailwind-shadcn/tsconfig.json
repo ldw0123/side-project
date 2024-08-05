@@ -26,7 +26,8 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "app/cytoscape/page.tsx"
+    "app/cytoscape/page.tsx",
+    "assets/font/mockServiceWorker.js"
   ],
   "exclude": ["node_modules"]
 }

@@ -4,8 +4,10 @@ const config: StorybookConfig = {
   stories: [
     '../stories/**/*.mdx',
     '../stories/**/*.stories.@(js|jsx|mjs|ts|tsx)',
+    '../components/**/*.stories.tsx', // 경로 설정
   ],
   addons: [
+    '@storybook/addon-actions',
     '@storybook/addon-onboarding',
     '@storybook/addon-links',
     '@storybook/addon-essentials',
