@@ -39,29 +39,34 @@ const Todo: React.FC<TodoProps> = ({
   };
 
   return (
-    <div className={'Task-container'} onClick={onArchive}>
-      <div className={'Task'}>
-        <div className={`Task-content`}>
-          {archive ? (
-            <>
-              <span className={'Task-content-fin'}>{content}</span>
-              <span className={'Task-content-fin-icon'}>finish</span>
-            </>
-          ) : (
-            <span>{content}</span>
-          )}
-        </div>
+    <div
+      className="cursor-pointer p-[1rem] border-b-[1px] border-[#737373]"
+      onClick={onArchive}
+    >
+      <div className="select-none color-[#fafafa] text-[0.9rem]">
+        <div className="flex flex-row">
+          <div className="flex-[1] overflow-hidden text-ellipsis text-nowrap">
+            {archive ? (
+              <>
+                <span className={'Task-content-fin'}>{content}</span>
+                <span className={'Task-content-fin-icon'}>finish</span>
+              </>
+            ) : (
+              <span>{content}</span>
+            )}
+          </div>
 
-        <div className={'Task-pin'} onClick={onPin}>
-          {pinned ? (
-            <FaStar className={'Task-pin-iconDone'} />
-          ) : (
-            <FaRegStar className={'Task-pin-icon'} />
-          )}
-        </div>
+          <div className={'Task-pin'} onClick={onPin}>
+            {pinned ? (
+              <FaStar className={'Task-pin-iconDone'} />
+            ) : (
+              <FaRegStar className={'Task-pin-icon'} />
+            )}
+          </div>
 
-        <div className={'Task-remove'} onClick={onRemove}>
-          <FaRegTrashAlt className={'Task-remove-icon'} />
+          <div className={'Task-remove'} onClick={onRemove}>
+            <FaRegTrashAlt className={'Task-remove-icon'} />
+          </div>
         </div>
       </div>
     </div>
