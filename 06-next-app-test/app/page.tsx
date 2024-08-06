@@ -31,7 +31,7 @@ export default function Home() {
       </div>
       <div className="mb-2">
         <Link href="/chartblock" className="font-bold text-red-400">
-          signup 페이지 이동
+          chartblock 페이지 이동
         </Link>
       </div>
     </>
