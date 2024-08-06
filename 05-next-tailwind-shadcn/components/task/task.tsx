@@ -60,6 +60,9 @@ export default function Task({
   );
 }
 
+// 데이터 요구사항 명시
+// 컴포넌트에 필요한 데이터 형태를 명시하려면 React에서 propTypes를 사용하는 것이 가장 좋다. 이는 자체적 문서화일 뿐만 아니라, 문제를 조기에 발견하는 데 도움이 된다
+// 이제 Task 컴포넌트가 잘못 사용된다면 경고가 나타난다
 Task.propTypes = {
   /** Composition of the task */
   task: PropTypes.shape({

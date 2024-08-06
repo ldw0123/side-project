@@ -11,12 +11,20 @@ export default {
 };
 
 // base data (위에서 생성한 Task 컴포넌트의 state)
-export const taskData = {
-  id: 1,
-  title: 'Test Task',
-  state: 'TASK_INBOX',
-  updateAt: new Date(2018, 0, 1, 9, 0),
-};
+export const taskData = [
+  {
+    id: 1,
+    title: 'Test Task 1',
+    state: 'TASK_INBOX',
+    updatedAt: new Date(2018, 0, 1, 9, 0),
+  },
+  {
+    id: 2,
+    title: 'Test Task 2',
+    state: 'TASK_INBOX',
+    updatedAt: new Date(2018, 0, 1, 9, 0),
+  },
+];
 
 // action(): 스토리북의 'actions' 패널에서 콜백 함수를 볼 수 있다
 // action을 사용하면, 함수를 직접 선언하지 않아도 이벤트가 발생했을 때, action에 정의한 함수가 발동한다
@@ -32,14 +40,25 @@ export const actionsData = {
  * 2. pinned 된 task (상단 고정)
  * 3. 완료된 task
  */
-export const Default = () => <Task task={{ ...taskData }} {...actionsData} />;
+export const Default = () => (
+  <>
+    <Task task={{ ...taskData[0] }} {...actionsData} />
+    <Task task={{ ...taskData[1] }} {...actionsData} />
+  </>
+);
 
 // 컴포넌트의 각 테스트 state(상태)를 적용한 함수형 컴포넌트
 export const Pinned = () => (
   // state: 'TASK_PINNED' <- test state 반영
-  <Task task={{ ...taskData, state: 'TASK_PINNED' }} {...actionsData} />
+  <>
+    <Task task={{ ...taskData[0], state: 'TASK_PINNED' }} {...actionsData} />
+    <Task task={{ ...taskData[1], state: 'TASK_PINNED' }} {...actionsData} />
+  </>
 );
 
 export const Archived = () => (
-  <Task task={{ ...taskData, state: 'TASK_ARCHIVED' }} {...actionsData} />
+  <>
+    <Task task={{ ...taskData[0], state: 'TASK_ARCHIVED' }} {...actionsData} />
+    <Task task={{ ...taskData[0], state: 'TASK_ARCHIVED' }} {...actionsData} />
+  </>
 );
