@@ -3,14 +3,18 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Button } from '@/components/ui/button';
 import { InputForm } from './input_form';
+import { ModeToggle } from '@/components/theme/theme-toggle-button';
 
 export default function InputPage() {
   return (
     <>
-      <div className="mb-8">
+      <div className="mb-4">
         <Link href="/" className="font-bold text-red-400">
           홈으로 이동
         </Link>
+      </div>
+      <div className="mb-4">
+        <ModeToggle />
       </div>
       <div className="mb-8">
         <Input type="email" placeholder="Email을 입력하십쇼" />
