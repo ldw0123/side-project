@@ -1,22 +1,22 @@
 import PropTypes from 'prop-types';
 import './task.css';
 
-interface Task {
+interface TaskItem {
   id: number;
   title: string;
   state: string;
 }
 
 interface TaskProps {
-  task: Task;
+  task: TaskItem;
   onArchiveTask: (id: number) => void;
   onPinTask: (id: number) => void;
 }
 
 export default function Task({
   task: { id, title, state },
-  onArchiveTask,
   onPinTask,
+  onArchiveTask,
 }: TaskProps) {
   return (
     <div className={`list-item ${state}`}>

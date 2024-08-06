@@ -15,9 +15,23 @@ interface TaskProps {
 // task 객체: TodoItem 컴포넌트에 전달될 기본 데이터
 const task: TaskProps = {
   idx: 1,
-  content: '오늘할일',
+  content: '운동하기',
   archive: false,
   pinned: false,
+};
+
+const task2: TaskProps = {
+  idx: 2,
+  content: '코딩하기',
+  archive: true,
+  pinned: false,
+};
+
+const task3: TaskProps = {
+  idx: 3,
+  content: '퇴근하기',
+  archive: false,
+  pinned: true,
 };
 
 // actions 객체: TodoItem 컴포넌트의 이벤트 핸들러로 사용될 함수들을 정의
