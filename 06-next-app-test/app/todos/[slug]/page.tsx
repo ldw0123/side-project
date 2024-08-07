@@ -9,9 +9,11 @@ interface paramsType {
 
 // 특정 Todo를 가져오는 함수
 async function getTodoById(id: string) {
+  // fetch를 통해 모든 항목을 가져오고
   const todos = await fetch('https://jsonplaceholder.typicode.com/todos').then(
     (res) => res.json()
   );
+  // id와 일치하는 항목을 반환한다
   return todos.find((todo: Todo) => todo.id === parseInt(id)) || null;
 }
 
@@ -31,7 +33,7 @@ export default async function TodoPage({ params }: paramsType) {
   );
 }
 
-// 빌드 시 미리 생성할 동적 경로를 정의합니다
+// 빌드 시 미리 생성할 동적 경로를 정의
 export async function generateStaticParams() {
   const todos: Todo[] = await fetch(
     'https://jsonplaceholder.typicode.com/todos'
