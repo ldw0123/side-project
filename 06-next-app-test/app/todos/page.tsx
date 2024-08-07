@@ -7,10 +7,6 @@ import { getTodos, Todo } from '@/api/service/todo/todoApi';
 export default function TodosPage() {
   const [todo, setTodo] = useState<Todo[]>([]);
 
-  // useEffect(() => {
-  //   getTodos();
-  // }, []);
-
   useEffect(() => {
     const fetchTodos = async () => {
       try {
