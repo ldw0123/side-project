@@ -52,7 +52,9 @@ const config = {
           DEFAULT: 'hsl(var(--card))',
           foreground: 'hsl(var(--card-foreground))',
         },
-        violet: 'violet',
+        // 커스텀
+        violet: 'var(--violet)',
+        mint: 'var(--mint)',
       },
       borderRadius: {
         lg: 'var(--radius)',

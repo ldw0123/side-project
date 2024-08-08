@@ -45,9 +45,26 @@ export default function buttonPage() {
         <Loader2 className="mr-2 h-4 w-4 animate-spin" />
         기다리셈!
       </Button>
+
+      <p className="mt-4 font-semibold">커스텀 버튼</p>
       <div>
-        <Button variant="violet" size="customSize">
-          커스텀
+        <Button variant="violet" size="customRound" className="mr-2">
+          violet
+        </Button>
+        <Button
+          variant="mint"
+          size="lg"
+          font="lg"
+          weight="bold"
+          className="mr-2"
+        >
+          mint
+        </Button>
+        <Button variant="navy" className="mr-2">
+          navy
+        </Button>
+        <Button variant="lightblue" font="xs" weight="bold" className="mr-2">
+          lightblue
         </Button>
       </div>
     </>
