@@ -33,6 +33,10 @@ export default function InputPage() {
       <div>
         <InputForm />
       </div>
+      <p className="mt-6 font-semibold">커스텀</p>
+      <div>
+        <Input variant="bold" />
+      </div>
     </>
   );
 }
