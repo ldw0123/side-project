@@ -34,6 +34,11 @@ export default function Home() {
           chartblock 페이지 이동
         </Link>
       </div>
+      <div className="mb-2">
+        <Link href="/pagination" className="font-bold text-red-400">
+          pagination 페이지 이동
+        </Link>
+      </div>
     </>
   );
 }
